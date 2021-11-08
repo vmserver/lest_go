@@ -107,9 +107,7 @@ async def bot_start(event):
                         \nI am {my_mention}'s assistant bot.\
                         \nYou can contact to my master from here."
         buttons = [
-            (
-                Button.url("𝘑𝘰𝘪𝘯 𝘗𝘳𝘦𝘥𝘢𝘵𝘰𝘳'𝘴 𝘈𝘣𝘰𝘥𝘦", "https://t.me/Predators_Abode"),
-            )
+            (Button.url("𝘑𝘰𝘪𝘯 𝘗𝘳𝘦𝘥𝘢𝘵𝘰𝘳'𝘴 𝘈𝘣𝘰𝘥𝘦", "https://t.me/Predators_Abode"),)
         ]
     else:
         start_msg = "Hey Master!\
