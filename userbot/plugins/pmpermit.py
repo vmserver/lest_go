@@ -119,12 +119,12 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
             remwarns=remwarns,
         )
     elif gvarstatus("pmmenu") is None:
-        USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me. 
-You have {warns}/{totalwarns} warns until you get blocked by the CatUserbot.
+        USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I'm {my_fullname}'s assistance. I haven't approved you yet to personal message me. 
+You have {warns}/{totalwarns} warns until you get blocked by the Me.
 Choose an option from below to specify the reason of your message and wait for me to check it. __⬇️"""
     else:
-        USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me.
-You have {warns}/{totalwarns} warns until you get blocked by the CatUserbot.
+        USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I'm {my_fullname}'s assistance. I haven't approved you yet to personal message me.
+You have {warns}/{totalwarns} warns until you get blocked by the Me.
 Don't spam my inbox. say reason and wait until my response.__"""
     addgvar("pmpermit_text", USER_BOT_NO_WARN)
     PM_WARNS[str(chat.id)] += 1
