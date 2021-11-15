@@ -559,27 +559,21 @@ async def inline_handler(event):  # sourcery no-metrics
             await event.answer([result] if result else None)
     else:
         buttons = [
-            (
-                Button.url("Source code", "https://github.com/Jisan09/catuserbot"),
-                Button.url(
-                    "Deploy",
-                    "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack&template=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack",
-                ),
-            )
+            (Button.url("𝘑𝘰𝘪𝘯 𝘗𝘳𝘦𝘥𝘢𝘵𝘰𝘳'𝘴 𝘈𝘣𝘰𝘥𝘦", "https://t.me/Predators_Abode"),)
         ]
         markup = event.client.build_reply_markup(buttons)
         photo = types.InputWebDocument(
             url=CATLOGO, size=0, mime_type="image/jpeg", attributes=[]
         )
         text, msg_entities = await event.client._parse_message_text(
-            "𝗗𝗲𝗽𝗹𝗼𝘆 𝘆𝗼𝘂𝗿 𝗼𝘄𝗻 𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁.", "md"
+            "𝙔𝙤𝙪 𝙘𝙖𝙣 𝙘𝙤𝙣𝙩𝙖𝙘𝙩 𝙋𝙚𝙣𝙚𝙩𝙧𝙖𝙩𝙤𝙧 𝙝𝙚𝙧𝙚.", "md"
         )
         result = types.InputBotInlineResult(
             id=str(uuid4()),
             type="photo",
-            title="𝘾𝙖𝙩𝙐𝙨𝙚𝙧𝙗𝙤𝙩",
-            description="Deploy yourself",
-            url="https://github.com/Jisan09/catuserbot",
+            title=𝐶𝛼𝑙𝑙𝑀𝛴𝟶𝟶𝟽",
+            description="𝘱𝘦𝘯𝘦𝘵𝘳𝘢𝘵𝘰𝘳'𝘴 𝘢𝘴𝘪𝘴𝘵𝘢𝘯𝘵",
+            url="t.me/Call_mE_007_bot",
             thumb=photo,
             content=photo,
             send_message=types.InputBotInlineMessageMediaAuto(
